@@ -6,4 +6,4 @@ before_install:
   - docker build -t adil/travisci -f Dockerfile.dev .
 
 script:
-  - docker run adil/travisci npm run test -- --coverage
+  - docker run -e CI=true adil/travisci npm run test -- --coverage
